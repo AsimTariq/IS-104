@@ -1,49 +1,14 @@
 <html>
 
 <head> 
-	<link rel="stylesheet" type="text/css" href="stylesheet.css" />   <!-- Bruk av ekstern stylesheet fil kalt stylesheet.css -->
+<link rel="stylesheet" type="text/css" href="stylesheet.css" />   <!-- Bruk av ekstern stylesheet fil kalt stylesheet.css -->
 </head>
 
 <title>LAB2</title>
 
 <body> 
-	<script src="Script.js"></script>								<!-- Javascript dir -->
+<script src="programmeringliste.js"></script>								<!-- Javascript dir -->
 
-	<script type="text/javascript"> 								<!-- Intern javascript, liste med programmerngsspråkene(display) som vises på siden. -->
-
-var textBlocks = new Array( 
-'Velkommen til en mystisk verden av programmeringsspråk', 
-'Actionscript', 
-'Apllescript',
-'ASP',
-'BASIC',
-'C',
-'C++',
-'Clojure',
-'COBOL',
-'Coldfusion',
-'Erlang',
-'Fortran',
-'Groovy',
-'Haskell',
-'Java',
-'Javascript',
-'Perl',
-'PHP',
-'Python',
-'Ruby',
-'Scala',
-'Scheme'
-); 
-
-function changeText(elemid)
- { 
-var ind = document.getElementById(elemid).selectedIndex; 
-document.getElementById("display").innerHTML=textBlocks[ind]; 
-	} 
-</script> 
-
- 
 
 <form> 
 <select id="whatever" onChange="changeText('whatever');"> <!-- Rullegardin -->
@@ -73,13 +38,18 @@ document.getElementById("display").innerHTML=textBlocks[ind];
 </form> 
 
 
+
+
 <!-- Navigasjon til forskjellige sider hvor "hjem" knappen fører brukeren tilbake til hjemmesiden -->
 <ul class="navbar">
-  <li><a href="file:///C:/Users/Hjemme/Desktop/LAB%20innleveringer/LAB%20-%202/Programmeringsspr%C3%A5k%202.html">Hjem</a>
-  <li><a href="Kronologisk.html">Kronologisk</a>
-  <li><a href="Hierarkisk.html">Hierarkisk</a>
-  <li><a href="Alfabetisk.html">Alfabetisk</a>
+<li><a href="#"onclick="myFunction()">Hjem</a>
+<li><a href="#"onclick="myFunction()">Kronologisk</a>
+<li><a href="#"onclick="myFunction()">Hierarkisk</a>
+<li><a href="#"onclick="myFunction()">Alfabetisk</a>
+
 </ul>
+
+
 
 <!-- Overskrift og detaljer -->
 <h1>Programmeringsspråk - Hva er det?</h1>
@@ -91,7 +61,7 @@ document.getElementById("display").innerHTML=textBlocks[ind];
 
 <!-- Dato websiden er laget -->
 <address>Laget 01.10.2013<br></br>
-  Av Asim.</address>
+         Av Asim.</address>
 
  
 </center>

@@ -1,9 +1,13 @@
+
+/* Bakgrunn/body farger, tekst og plassering */
 body {
     padding-left: 11em;
     font-family: Georgia, "Times New Roman",
           Times, serif;
     color: purple;
     background-color: #d8da3d }
+  
+  /* listestrukturen på menyen */ 
   ul.navbar {
   list-style-type: none;
     padding: 0;
@@ -20,6 +24,7 @@ ul.navbar li {
     border-right: 1em solid black 
 	}
  
+ /* Utformingen av linker i menyen */ 
  ul.navbar a 
 	{
     text-decoration: none
@@ -32,8 +37,10 @@ ul.navbar li {
 	{
     color: purple
 	}
-	  address 
-	{
+	
+	/* Lager margen med dottet strek vertikalt */
+	 address 
+	 {
     margin-top: 1em;
     padding-top: 1em;
     border-top: thin dotted 
@@ -47,6 +54,7 @@ font-size:20pt;
 
 }
 
+/* Stilen til Overskriften (h1) */
  h1 {
     font-family: Helvetica, Geneva, Arial,
           SunSans-Regular, sans-serif 
