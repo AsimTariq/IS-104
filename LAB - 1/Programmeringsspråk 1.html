@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head> 
+<link rel="stylesheet" type="text/css" href="stylesheet.css" />
+</head>
+
+
+<body>
+<script src="Script.js"></script>
+
+
+
+<center>
+<h3>Programmeringsspråk:</h3>
+<ol = "1">
+ <li>Actionscript</li>
+ <li>Applescript</li>
+ <li>Asp</li>
+ <li>BASIC</li> 
+
+<h1>
+ <li>C</li>
+ <li>C++</li>
+ <li>Clojure</li>
+ <li>COBOL</li> 
+</h1>
+
+ 
+<h2>
+ <li>Coldfusion</li>
+ <li>Erlang</li>
+ <li>Fortran</li>
+ <li>Groovy</li>
+</h2>
+
+
+<h3> 
+ <li>Haskell</li>
+ <li>Java</li>
+ <li>JavaScript</li>
+ <li>Lisp</li>
+</h3>
+
+<h4>
+ <li>Perl</li>
+ <li>PHP</li>
+ <li>Python</li>
+ <li>Ruby</li>
+ <li>Scala</li>
+ <li>Scheme</li>
+</h4>
+
+
+
+
+<script type="text/javascript"> 
+
+var textBlocks = new Array( 
+'XXXXXX', 
+'Actionscript', 
+'Apllescript',
+'ASP',
+'BASIC',
+'C',
+'C++',
+'Clojure',
+'COBOL',
+'Coldfusion',
+'Erlang',
+'Fortran',
+'Groovy',
+'Haskell',
+'Java',
+'Javascript',
+'Perl',
+'PHP',
+'Python',
+'Ruby',
+'Scala',
+'Scheme'
+
+); 
+
+function changeText(elemid) { 
+var ind = document.getElementById(elemid).selectedIndex; 
+document.getElementById("display").innerHTML=textBlocks[ind]; 
+} 
+</script> 
+
+</head><body> 
+
+<form> 
+<select id="whatever" onChange="changeText('whatever');"> 
+<option value="0">Velg Programmeringsspråk</option> 
+<option value="1">Actionscript</option> 
+<option value="2">Applescript</option> 
+<option value="3">Asp</option> 
+<option value="4">BASIC</option> 
+<option value="5">C</option> 
+<option value="6">C++</option> 
+<option value="7">Clojure</option> 
+<option value="8">COBOL</option> 
+<option value="9">Coldfusion</option> 
+<option value="10">Erlang</option> 
+<option value="11">Fortran</option> 
+<option value="12">Groovy</option> 
+<option value="13">Haskell</option> 
+<option value="14">Java</option> 
+<option value="15">Javascript</option> 
+<option value="16">Perl</option> 
+<option value="17">PHP</option> 
+<option value="18">Python</option> 
+<option value="19">Ruby</option>
+<option value="20">Scala</option>
+<option value="21">Scheme</option>
+</select><br> 
+</form> 
+Du har Valgt:
+<div id="display">XXXXXX</div> 
+
+
+
+<p>
+<button type="button" onclick="alert('Laget av Asim')">Om</button>
+</p>
+ 
+
+ 
+</center>
+</body>
+</html>
