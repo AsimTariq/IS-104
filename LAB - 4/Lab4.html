@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>LAB4 Alfabetinsk liste bruk av jQuery</title>
+<!-- jQuery -->
+<script language="javascript" type="text/javascript" src="js/jquery.js"></script>
+<!-- ScrollTO plugin -->
+<script language="javascript" type="text/javascript" src="js/jquery.scrollTo-min.js"></script>
+<link rel="stylesheet" type="text/css" href="Lab4.css">
+</head>
+<body>
+<div id="body-container">
+    <div class="glossary-container">
+        <ul class="firstUL">
+            <li id="a" class="selected">A</li>
+            <li id="b">B</li>
+            <li id="c">C</li>
+            <li id="d">D</li>
+            <li id="e">E</li>
+            <li id="f">F</li>
+            <li id="g">G</li>
+            <li id="h">H</li>
+        </ul>
+    </div>
+    <div class="content-container">
+    	<!-- A -->
+    	<div id="content-for-a" style="background-color:#d2e2fc">
+        	<h2>A</h2>
+        	<p><strong>Actionscript</strong><br>
+ActionScript is an object-oriented language originally developed by Macromedia Inc. (now owned by Adobe Systems). It is a dialect of ECMAScript (meaning it is a superset of the syntax and semantics of the language more widely known as JavaScript), and is used primarily for the development of websites and software targeting the Adobe Flash Player platform, used on Web pages in the form of embedded SWF files. The language itself is open-source in that its specification is offered free of charge[2] and both an open source compiler (as part of Apache Flex) and open source virtual machine (Mozilla Tamarin) are available.</p>
+ 			<p class="return-to-top">Tilbake til toppen</p>
+        </div>
+        
+        <!-- B -->
+        <div id="content-for-b">
+	        <h2>B</h2>
+        	<p><strong>base rate information</strong><br>
+BASIC Programming attempted to teach simple computer programming on the Atari 2600. It was released for the Atari 2600 console in 1979 and it was one of only a few non-gaming cartridges released by the company. This program allowed consumers to create some simple programs using its own unique programming language, which was superficially similar to dialects of BASIC, but differed in many important aspects. The extremely small RAM size of the Atari 2600, 128 bytes, severely restricted the possibilities of this cartridge for writing any programs.</p>
+			<p class="return-to-top">Tilbake til toppen</p>
+        </div>
+        
+        <!-- C -->
+        <div id="content-for-c">
+	        <h2>C</h2>
+        	<p><strong>C</strong><br>
+In computing, C (/ˈsiː/, as in the letter C) is a general-purpose programming language initially developed by Dennis Ritchie between 1969 and 1973 at AT&T Bell Labs.[4] Like most imperative languages in the ALGOL tradition, C has facilities for structured programming and allows lexical variable scope and recursion, while a static type system prevents many unintended operations. Its design provides constructs that map efficiently to typical machine instructions, and therefore it has found lasting use in applications that had formerly been coded in assembly language, most notably system software like the Unix computer operating system.[5] </p>
+			<p class="return-to-top">Tilbake til toppen</p>
+        </div>
+
+        <!-- D -->
+        <div id="content-for-d">
+	        <h2>D</h2>
+        	<p><strong>D</strong><br>
+The D programming language is an object-oriented, imperative, multi-paradigm system programming language created by Walter Bright of Digital Mars. Though it originated as a re-engineering of C++, D is a distinct language, having redesigned some core C++ features while also taking inspiration from other languages, notably Java, Python, Ruby, C#, and Eiffel.</p>
+			<p class="return-to-top">Tilbake til toppen</p>
+        </div>
+
+        <!-- E -->
+        <div id="content-for-e">
+        	<h2>E</h2>
+			<p><strong>E.........</strong><br>
+ 			<p class="return-to-top">Tilbake til toppen</p>
+        </div>
+
+        <!-- F -->
+        <div id="content-for-f">
+        	<h2>F</h2>
+        	<p><strong>F..........</strong><br>
+ 			<p class="return-to-top">Tilbake til toppen</p>
+        </div>
+        
+        <!-- G -->
+        <div id="content-for-g">
+        	<h2>G</h2>
+        	<p><strong>G..........</strong><br>
+			<p class="return-to-top">Tilbake til toppen</p>
+        </div>
+
+        <!-- H -->
+        <div id="content-for-h">
+        	<h2>H</h2>
+        	<p><strong>H...........</strong><br>
+			<p class="return-to-top">Tilbake til toppen</p>
+        </div>
+    </div>
+</div>
+
+<script language="javascript" type="text/javascript">
+$(document).ready(function() {
+	 //Markere lenken og rulle til det selekterte elementet i DOM 
+ 	 $(".firstUL li").each(function() { 
+		$(this).click(function() { //Fange hendelse når brukeren trykker på en bokstav.
+			$(".firstUL li").removeClass("selected"); // I utgangspunktet fjern klassen selcted, hvis den finnes.
+			$(this).addClass("selected"); //Legg til "selected" klassen til det elementet brukeren har klikket på
+			elementClick = $(this).attr("id"); // få tak i den tilsvarende 'id' for eksempel 'a', 'b' , 'c' osv..,
+			$(".content-container").scrollTo($("#content-for-"+elementClick), 800); //rulle til det selekterte DOM-elemntet content for X, X - selektert bokstav
+			$(".content-container div").css({'background-color' : '#ffffff'}); //Endre bagrunnsfarge. 
+			$(".content-container #content-for-"+elementClick).css({'background-color' : '#d2e2fc'}); //Setter bagrunnsbildet til lyseblått.
+		});
+	 });
+	 
+	 //Når "tilbake til toppen" blir klikket på må 'A' markeres og innholdet må rulles til toppen
+	 $('.return-to-top').click(function(){
+		$(".firstUL li").each(function() { 
+			$(".firstUL li").removeClass("selected"); //Fjerner classname "selected"
+		});
+		$("#a").addClass("selected"); // Legg til klassen selected til første bokstav i alfabetet
+	 	$(".content-container").scrollTo($("#content-for-a"), 800); //Rulle til et element, "A" i dette tilfelle
+		$(".content-container div").css({'background-color' : '#ffffff'}); //Sette bakgrunnsfargen til hvit til alle div og til lyseblått for den selekterte div-en (a i dette tilfelle)
+		$(".content-container #content-for-a").css({'background-color' : '#d2e2fc'}); 
+	 });
+});
+</script>
+
+<address> Laget 25.11.2013, <br>
+Av Asim Tariq ( IT og Informasjonssystemer 1.året ) </address> 
+
+</body>
+</html>
