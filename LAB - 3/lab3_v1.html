@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Hendelser med jQuery</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery-1.8.1.js"></script>
+    <script>
+	
+$(function() {
+// Observatør
+$(document.body).on('keydown', function(e) {
+// Switch (sorterer keypress til den man vil ha respons fra) 
+switch (e.which) {
+// Venstre pil, med utskrift
+case 37:
+				
+// Deloppgave 0, her skal det skrives til innerHTML ( Venstre Pil ) 
+console.log( 'venstre pil tast trykket!' );
+$("#keypressed").addClass("blue").html("Du trykket venstre pil!");
+break;
+        
+			//  høyre pil
+			case 39:
+				console.log( 'høyre pil tast trykket!' );
+				$("#keypressed").addClass("blue").html("Du trykket høyre pil!");
+				break;
+				
+				
+			//  pil opp
+			case 38:
+				console.log( 'pil opp trykket!');
+				$("#keypressed").addClass("blue").html("Du trykket pil opp!");
+				break;	
+			
+			// Pil ned
+			case 40:
+				console.log ('pil ned trykket!');
+				$("#keypressed").addClass("blue").html("Du trykket pil ned!");
+				break;
+		}
+		});	
+	});
+	
+	
+	
+	</script>
+</head>
+<body>
+<p>Testside for å "fange" hendelser fra tatatur.</p>
+<p>
+	<ul>
+		<li>Bruk helst Google Chrome (norsk versjon).</li> 
+		<li>Trykk høyre museknapp og velg "Inspiser element".</li> 
+		<li>Velg "Console" fra hjelpeverktøyets hovedmenyen.</li>
+	</ul>
+</p>
+<p>Man har Console også i andre nettlesere. Bruker du en annen nettleser søk på "JavaScript console" for din nettleser for å finne ut hvordan du kan bruke det.</p>
+
+<p id="keypressed"> </p>
+	
+	
+	
+
+</body>
+</html>

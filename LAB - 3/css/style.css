@@ -1,0 +1,12 @@
+/*farger til tekst og kordinater*/
+.blue {
+color:blue;}
+.red {
+color:red;}
+
+/*canvas*/
+#my_canvas {
+border-style: solid;
+border-width: 1px;
+
+}
